@@ -5,10 +5,10 @@ import DashboardCard from '@/app/(DashboardLayout)/components/shared/DashboardCa
 
 const Icons = () => {
   return (
-    <PageContainer title="Icons" description="this is Icons">
+    <PageContainer title="Prescription" description="this is Prescription">
 
-      <DashboardCard title="Icons">
-      <iframe src="https://tabler-icons.io/"  title="Inline Frame Example" frameBorder={0}
+      <DashboardCard title="Prescription">
+      <iframe src="https://excalidraw.com/"  title="Inline Frame Example" 
     width="100%"
     height="650"></iframe>
       </DashboardCard>
