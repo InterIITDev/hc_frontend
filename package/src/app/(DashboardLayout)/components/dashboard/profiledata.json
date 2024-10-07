@@ -1,0 +1,13 @@
+{ "profileData" : [
+    {
+    "name" : "Prabhakar Raj",
+    "rollNo": "230761",
+    "bloodGroup": "O+",
+    "designation": "Student",
+    "image":"https://images.alphacoders.com/295/295531.jpg",
+    "department": "Chemical Engineering",
+    "resi": "12",
+    "email": "prabhakar23@iitk.ac.in"
+    }
+]
+}

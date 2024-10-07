@@ -1,15 +1,23 @@
 'use client'
 import { Grid, Box } from '@mui/material';
 import PageContainer from '@/app/(DashboardLayout)/components/container/PageContainer';
+import { appointmentData } from '@/app/(DashboardLayout)/components/dashboard/appointmentData.json'; 
 // components
-import SalesOverview from '@/app/(DashboardLayout)/components/dashboard/SalesOverview';
-import YearlyBreakup from '@/app/(DashboardLayout)/components/dashboard/YearlyBreakup';
-import RecentTransactions from '@/app/(DashboardLayout)/components/dashboard/RecentTransactions';
-import ProductPerformance from '@/app/(DashboardLayout)/components/dashboard/ProductPerformance';
-import Blog from '@/app/(DashboardLayout)/components/dashboard/Blog';
-import MonthlyEarnings from '@/app/(DashboardLayout)/components/dashboard/MonthlyEarnings';
+import SalesOverview from '@/app/(DashboardLayout)/components/dashboard/Profilecard';
+import YearlyBreakup from '@/app/(DashboardLayout)/components/dashboard/BookApptcard';
+import AppointmentHistory from '@/app/(DashboardLayout)/components/dashboard/appointmentHistory';
+import { useState } from 'react';
+import PrescriptionCard from './prescriptioncard';
 
 const Dashboard = () => {
+  const [selectedPrescription, setSelectedPrescription] = useState<any>(null);
+  const handleViewPrescription = (prescriptionLink: string) => {
+    const selected = appointmentData.find(
+      (appointment) => appointment.prescriptionLink === prescriptionLink
+    );
+    setSelectedPrescription(selected);
+  };
+
   return (
     <PageContainer title="Dashboard" description="this is Dashboard">
       <Box>
@@ -22,19 +30,14 @@ const Dashboard = () => {
               <Grid item xs={12}>
                 <YearlyBreakup />
               </Grid>
-              <Grid item xs={12}>
-                <MonthlyEarnings />
-              </Grid>
+            a
             </Grid>
           </Grid>
-          <Grid item xs={12} lg={4}>
-            <RecentTransactions />
+          <Grid item xs={12} lg={6} >
+            <AppointmentHistory data={appointmentData}/>
           </Grid>
-          <Grid item xs={12} lg={8}>
-            <ProductPerformance />
-          </Grid>
-          <Grid item xs={12}>
-            <Blog />
+          <Grid item xs={12} lg={6}>
+            <PrescriptionCard prescription={selectedPrescription} />
           </Grid>
         </Grid>
       </Box>
