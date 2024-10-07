@@ -3,41 +3,40 @@ import { Grid, Box } from '@mui/material';
 import PageContainer from '@/app/(DashboardLayout)/components/container/PageContainer';
 import { appointmentData } from '@/app/(DashboardLayout)/components/dashboard/appointmentData.json'; 
 // components
-import SalesOverview from '@/app/(DashboardLayout)/components/dashboard/Profilecard';
-import YearlyBreakup from '@/app/(DashboardLayout)/components/dashboard/BookApptcard';
+import Profile from '@/app/(DashboardLayout)/components/dashboard/Profilecard';
+import BookApptCard from '@/app/(DashboardLayout)/components/dashboard/BookApptcard';
 import AppointmentHistory from '@/app/(DashboardLayout)/components/dashboard/appointmentHistory';
 import { useState } from 'react';
-import PrescriptionCard from './prescriptioncard';
+import AppointmentList from './AppointmentList';
 
 const Dashboard = () => {
-  const [selectedPrescription, setSelectedPrescription] = useState<any>(null);
-  const handleViewPrescription = (prescriptionLink: string) => {
-    const selected = appointmentData.find(
-      (appointment) => appointment.prescriptionLink === prescriptionLink
-    );
-    setSelectedPrescription(selected);
-  };
+const [selectedAppointment, setSelectedAppointment] = useState<any>(null);
+
+// Handles selecting an appointment from the list
+const handleAppointmentSelect = (appointment: any) => {
+  setSelectedAppointment(appointment);
+};
 
   return (
     <PageContainer title="Dashboard" description="this is Dashboard">
       <Box>
         <Grid container spacing={3}>
           <Grid item xs={12} lg={8}>
-            <SalesOverview />
+            <Profile />
           </Grid>
           <Grid item xs={12} lg={4}>
             <Grid container spacing={3}>
               <Grid item xs={12}>
-                <YearlyBreakup />
+                <BookApptCard />
               </Grid>
-            a
+            
             </Grid>
           </Grid>
           <Grid item xs={12} lg={6} >
-            <AppointmentHistory data={appointmentData}/>
+            <AppointmentList data={appointmentData} onAppointmentSelect={handleAppointmentSelect}/>
           </Grid>
           <Grid item xs={12} lg={6}>
-            <PrescriptionCard prescription={selectedPrescription} />
+            <AppointmentHistory appointment={selectedAppointment}/>
           </Grid>
         </Grid>
       </Box>
