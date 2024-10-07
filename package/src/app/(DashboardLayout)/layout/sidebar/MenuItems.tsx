@@ -1,11 +1,7 @@
 import {
-  IconAperture,
   IconCopy,
   IconLayoutDashboard,
-  IconLogin,
-  IconMoodHappy,
-  IconTypography,
-  IconUserPlus,
+IconWriting
 } from "@tabler/icons-react";
 
 import { uniqueId } from "lodash";
@@ -22,46 +18,31 @@ const Menuitems = [
     icon: IconLayoutDashboard,
     href: "/",
   },
+
+  // {
+  //   navlabel: true,
+  //   subheader: "Auth",
+  // },
+  // {
+  //   id: uniqueId(),
+  //   title: "Login",
+  //   icon: IconLogin,
+  //   href: "/authentication/login",
+  // },
+  // {
+  //   id: uniqueId(),
+  //   title: "Register",
+  //   icon: IconUserPlus,
+  //   href: "/authentication/register",
+  // },
   {
     navlabel: true,
-    subheader: "Utilities",
+    subheader: "Prescription",
   },
   {
     id: uniqueId(),
-    title: "Typography",
-    icon: IconTypography,
-    href: "/utilities/typography",
-  },
-  {
-    id: uniqueId(),
-    title: "Shadow",
-    icon: IconCopy,
-    href: "/utilities/shadow",
-  },
-  {
-    navlabel: true,
-    subheader: "Auth",
-  },
-  {
-    id: uniqueId(),
-    title: "Login",
-    icon: IconLogin,
-    href: "/authentication/login",
-  },
-  {
-    id: uniqueId(),
-    title: "Register",
-    icon: IconUserPlus,
-    href: "/authentication/register",
-  },
-  {
-    navlabel: true,
-    subheader: "Extra",
-  },
-  {
-    id: uniqueId(),
-    title: "Icons",
-    icon: IconMoodHappy,
+    title: "Scribble Pad",
+    icon: IconWriting,
     href: "/icons",
   }
 ];
