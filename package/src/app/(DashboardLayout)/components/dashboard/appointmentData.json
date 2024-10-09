@@ -5,42 +5,82 @@
       "doctorName": "Dr. John Doe",
       "prescriptionLink": "https://www.researchgate.net/publication/345830022/figure/fig4/AS:957640029003789@1605330583881/Sample-prescription-used-as-input-to-the-GUI-developed-in-the-present-work.png",
       "status": "Payment received",
-      "color": "primary"
+      "color": "primary",
+      "timeline": [
+        {
+          "time": "09:00 am, 4th September",
+          "status": "Appointment booked",
+          "note": "Patient booked an appointment."
+        },
+        {
+          "time": "09:15 am, 4th September",
+          "status": "Payment initiated",
+          "note": "Payment process started."
+        },
+        {
+          "time": "09:25 am, 4th September",
+          "status": "Payment received",
+          "note": "Payment successfully completed."
+        },
+        {
+          "time": "09:30 am, 4th September",
+          "status": "Appointment started",
+          "note": "Consultation with Dr. John Doe began."
+        }
+      ]
     },
     {
       "time": "10:00 am, 15th September",
       "doctorName": "Dr. Sarah Smith",
       "prescriptionLink": "/prescription/67890",
       "status": "New appointment booked",
-      "color": "secondary"
+      "color": "secondary",
+      "timeline": [
+        {
+          "time": "09:50 am, 15th September",
+          "status": "Appointment booked",
+          "note": "Patient successfully booked an appointment."
+        },
+        {
+          "time": "09:55 am, 15th September",
+          "status": "Payment pending",
+          "note": "Payment process pending."
+        },
+        {
+          "time": "10:00 am, 15th September",
+          "status": "Appointment scheduled",
+          "note": "Waiting for payment to be completed."
+        }
+      ]
     },
     {
       "time": "12:00 pm, 3rd August",
       "doctorName": "Dr. Michael Brown",
       "prescriptionLink": "/prescription/11223",
       "status": "Payment completed",
-      "color": "success"
-    },
-    {
-      "time": "12:00 pm, 3rd August",
-      "doctorName": "Dr. Michael Brown",
-      "prescriptionLink": "/prescription/11223",
-      "status": "Payment completed",
-      "color": "success"
-    },
-    {
-      "time": "12:00 pm, 3rd August",
-      "doctorName": "Dr. Michael Brown",
-      "prescriptionLink": "/prescription/11223",
-      "status": "Payment completed",
-      "color": "success"
-    },
-    {
-      "time": "12:00 pm, 3rd August",
-      "doctorName": "Dr. Michael Brown",
-      "prescriptionLink": "/prescription/11223",
-      "status": "Payment completed",
-      "color": "success"
+      "color": "success",
+      "timeline": [
+        {
+          "time": "11:45 am, 3rd August",
+          "status": "Appointment booked",
+          "note": "Patient booked an appointment with Dr. Michael Brown."
+        },
+        {
+          "time": "11:50 am, 3rd August",
+          "status": "Payment initiated",
+          "note": "Payment process started."
+        },
+        {
+          "time": "11:55 am, 3rd August",
+          "status": "Payment completed",
+          "note": "Payment successfully completed."
+        },
+        {
+          "time": "12:00 pm, 3rd August",
+          "status": "Appointment started",
+          "note": "Consultation with Dr. Michael Brown began."
+        }
+      ]
     }
   ]
 }
