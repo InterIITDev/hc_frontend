@@ -2,12 +2,13 @@
 import { Grid, Box } from '@mui/material';
 import PageContainer from '@/app/(DashboardLayout)/components/container/PageContainer';
 import { appointmentData } from '@/app/(DashboardLayout)/components/dashboard/appointmentData.json'; 
-// components
-import SalesOverview from '@/app/(DashboardLayout)/components/dashboard/Profilecard';
+
+import Profile from '@/app/(DashboardLayout)/components/dashboard/ProfileCard';
 import YearlyBreakup from '@/app/(DashboardLayout)/components/dashboard/BookApptcard';
 import AppointmentHistory from '@/app/(DashboardLayout)/components/dashboard/appointmentHistory';
 import { useState } from 'react';
 import PrescriptionCard from './prescriptioncard';
+import BookAppointmentCard from '@/app/(DashboardLayout)/components/dashboard/BookApptcard';
 
 const Dashboard = () => {
   const [selectedPrescription, setSelectedPrescription] = useState<any>(null);
@@ -22,15 +23,20 @@ const Dashboard = () => {
     <PageContainer title="Dashboard" description="this is Dashboard">
       <Box>
         <Grid container spacing={3}> 
-                    <Grid item xs={12} lg={4}>
+          <Grid item xs={12} lg={4}>
             <Grid container spacing={3}>
               <Grid item xs={12}>
-                <YearlyBreakup />
+                <BookAppointmentCard />
               </Grid>
-            a
+
             </Grid>
           </Grid>
-          <Grid item xs={12} lg={6} >
+          <Grid item xs={12} lg={8}>
+            
+            <Profile />
+          
+          </Grid>
+         <Grid item xs={12} lg={6} >
             <AppointmentHistory data={appointmentData}/>
           </Grid>
           <Grid item xs={12} lg={6}>
