@@ -3,7 +3,6 @@ import { Grid, Box } from '@mui/material';
 import PageContainer from '@/app/(DashboardLayout)/components/container/PageContainer';
 import { appointmentData } from '@/app/(DashboardLayout)/components/dashboard/appointmentData.json'; 
 // components
-import SalesOverview from '@/app/(DashboardLayout)/components/dashboard/Profilecard';
 import YearlyBreakup from '@/app/(DashboardLayout)/components/dashboard/BookApptcard';
 import AppointmentHistory from '@/app/(DashboardLayout)/components/dashboard/appointmentHistory';
 import { useState } from 'react';
